@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PELÍCULAS y SERIES</title>
+        <link href="styles.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script type="text/javascript" src=functions.js></script>
+    </head>
+    <body>
+
+
+    <div> 
+        <hr></hr>                      
+        <h1 class="text-center">Películas y Series</h1>
+        <hr></hr>  
+    </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Información completa</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <table>
+                <caption></caption>
+                <tr> 
+                    <td>
+                        <div  id="imagenes"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div  id="detalles"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="input-group mb-3 d-flex p-4">
+        <input type="text" id="titulo" class="form-control" placeholder="Ingrese un título" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <input type="button" class="btn btn-dark" value="Buscar" id="btnBuscar" onclick="return buscar(this)"> 
+        </div>
+    </div>
+
+    <div class="alert alert-dark" role="alert" id="alerta">
+        <a href="#" class="alert-link"></a>
+    </div>
+
+    <div>   
+        <hr></hr>    
+        <h2 class="text-center ">Cartelera de títulos disponibles</h2>
+        <hr></hr>
+    </div>
+
+    <div class="container table-responsive">    
+        <table class="table table-sm table-dark table-hover table-bordered">
+            <caption>Lista de títulos</caption>
+            <thead>
+                <tr> 
+                <th></th>
+                <th>TíTULO</th>
+                <th>AÑO</th>
+                <th>TIPO</th>
+                <th  id="imagen">PÓSTER</th>
+                </tr>
+            </thead>
+            <tbody id="informacion"></tbody>                 
+        </table>
+<!--
+        <table>
+            <caption>Información completa</caption>
+            <tr>
+                <td>
+                    <div  id="detalles"></div>
+                </td>
+            </tr>
+            <tr> 
+                <td>
+                    <div  id="imagenes"></div>
+                </td>
+            </tr>
+        </table> 
+-->
+    </div>
+
+    <div class="text-center">
+        <hr></hr>            
+        <input type="button"  class="btn btn-dark" id="uno" value="1" onclick="return buscar(this)" />
+        <input type="button"  class="btn btn-dark" id="dos" value="2" onclick="return buscar(this)" /> 
+        <input type="button"  class="btn btn-dark" id="tres" value="3" onclick="return buscar(this)" />            
+        <input type="button"  class="btn btn-dark" id="cuatro" value="4" onclick="return buscar(this)" />            
+        <input type="button"  class="btn btn-dark" id="cinco" value="5" onclick="return buscar(this)" /> 
+        <input type="button"  class="btn btn-dark" id=">>" value=">>" onclick="siguiente()" />  
+        <hr></hr>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    
+    </body>
+</html>
